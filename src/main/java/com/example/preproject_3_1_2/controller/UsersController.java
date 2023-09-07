@@ -27,12 +27,12 @@ public class UsersController {
         return "userById";
     }
 
-    @GetMapping("users/new")
+    @GetMapping("/users/new")
     public String newUser(@ModelAttribute("user") User user) {
         return "new";
     }
 
-    @PostMapping("users/new")
+    @PostMapping("/users/new")
     public String create(@ModelAttribute("user") User user) {
         userService.add(user);
         return "redirect:/users";
